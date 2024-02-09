@@ -1,0 +1,26 @@
+""" cards.py
+  Natalie Taylor
+  demonstration of functions
+  manage a deck of cards db
+  """
+  NumCards = 52
+  RankName = ("Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King")
+
+  SuiteName = ("clubs", "hearts", "spades", "diamonds")
+  Hands = ("deck", "player", "computer")
+
+  Deck = 0
+  Player = 1
+  Computer = 2
+
+def main():
+  cardDB = initCards()
+
+  for i in range(5):
+      assignCard(cardDB, Player)
+      assignCard(cardDB, Computer)
+
+  showDB(cardDB)
+
+  showHand(cardDB, Player)
+  showHand(cardDB, Computer)
